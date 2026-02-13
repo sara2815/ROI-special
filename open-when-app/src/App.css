@@ -1,0 +1,39 @@
+h1 {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  background: #1e1e2e;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.emoji {
+  font-size: 2rem;
+}
+
+.message {
+  font-size: 1rem;
+  line-height: 1.4;
+}
