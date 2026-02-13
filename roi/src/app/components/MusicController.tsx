@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import ReactPlayer from "react-player";
+import { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
 // Configuration for music tracks (local MP3 files placed in `public/audio`)
@@ -22,6 +21,7 @@ interface MusicControllerProps {
 export function MusicController({ isPlaying }: MusicControllerProps) {
   const location = useLocation();
   const [url, setUrl] = useState(MUSIC_TRACKS.default);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     // Check if the current path has a specific track assigned
@@ -36,18 +36,31 @@ export function MusicController({ isPlaying }: MusicControllerProps) {
     setUrl(specificTrack ?? MUSIC_TRACKS.default);
   }, [location]);
 
-  if (!isPlaying) return null;
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
 
+    audio.volume = 0.4;
+    audio.loop = true;
+
+    // If URL changed, update src
+    if (audio.src !== window.location.origin + url) {
+      audio.src = url;
+    }
+
+    if (isPlaying) {
+      void audio.play().catch(() => {
+        // Autoplay may be blocked; user will have to interact to start audio
+      });
+    } else {
+      audio.pause();
+    }
+  }, [url, isPlaying]);
+
+  // Keep an invisible audio element in the DOM
   return (
     <div className="hidden">
-      <ReactPlayer
-        url={url}
-        playing={isPlaying}
-        loop={true}
-        volume={0.4}
-        width="0"
-        height="0"
-      />
+      <audio ref={audioRef} />
     </div>
   );
 }
