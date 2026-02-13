@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 const MUSIC_TRACKS: Record<string, string> = {
   // Default / landing page
   "/": "/audio/song_1.mp3",
-
+  
   // Collection / home
   "/collection": "/audio/song_2.mp3",
 
