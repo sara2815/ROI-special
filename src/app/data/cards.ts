@@ -11,7 +11,7 @@ export const CARDS: CardData[] = [
   {
     id: "1",
     title: "Open when you want to share a cup of chai",
-    image: "/public/ust.jpg",
+    image: `${import.meta.env.BASE_URL}ust.jpg`,
     previewText: "You mean a latte to me, but im too chai to say it",
     fullMessage: "I'm assuming you've opened this because you're craving some chai. However, knowing you, this could be anytime from 6 am to 2 am, and it could be anywhere from your first to your third cup of the day. Im pretty sure if i dissected you, I would find chai.\n\ \n\
     When I think of chai, it takes me back to our UST days where I would heap sugar into my drink to share this with you. The words 'I like you' were buried deep inside, the words 'I hate chai' were stuffed under covers, and the words 'I like spending time with you' were at my lips but never quite said. But chai was slow, and snacks could be added to prolong the duration, and our conversation could be taken off in tangents to ask for a minute longer without really asking for it.\n\ \n\ The sweetness of the lingering, in retrospect, puts forth heavy competition to to the sugar I added to my cup. Now, here we are. The words are out in the open, and hundreds of thousands of miles take the space of the distance of a single LG1 table. Funny how that works.\n\
@@ -21,7 +21,7 @@ export const CARDS: CardData[] = [
   {
     id: "2",
     title: "Open if (when?) we have a fight",
-    image: "/public/lingering.jpg",
+    image: `${import.meta.env.BASE_URL}lingering.jpg`,
     previewText: "Outstubborn the other final boss",
     fullMessage: "Maybe we've clashed the way that two headstrong people inevitably will. Maybe your 'we must take it out' self was forced to deal with my 'i dont want to talk about' self. Most likely, I've been a menace. But nevertheless, we're both a bit hurt, or mad, or stubborn, or some permutation combination of it.\n\ \n\
     S once said that a ldr was hard because, what could be fixed with a hug and a few words face to face, could take hours of conversation. For better or worse, that's the deal we both have signed up for. Disagreements are bound to take a little more work this way, but I'm sure we've got it. We're both SO COOL after all. \n\ \n\
@@ -32,7 +32,7 @@ export const CARDS: CardData[] = [
   {
     id: "3",
     title: "Open when you're down or need a confidence boost",
-    image: "/public/walk.jpg",
+    image: `${import.meta.env.BASE_URL}walk.jpg`,
     previewText: "god gives his hardest battles to his cutest soliders",
     fullMessage: "This is for one of those days where everything does not feel in the grasp of your find, everything is a bit frustrating, and your brain wonders if you can even do all the things you want to (I'm sorry if this is presumptuous, this is just me so often HAHA, maybe you're too cool to be plagued by these things.). \n\n\
  Either ways, you are hands down the coolest, smartest person I know. And before you accuse me of being rose tinted, I'd like you to know my opinions are based in objective facts. Ever since the day you sat in my class and I saw you work on your blood donation service thing, to the first time I read your writing, to every person who I met, who only ever had great things to say about you, down to the way you think. I don't think you realize or appreciate just how cool and capable you are. \n\
@@ -59,10 +59,13 @@ date: "Feb 12, 2026"
   },
   {
     id: "6",
-    title: "Open when you want a hug",
-    image: "/public/sea.jpg",
-    previewText: "For you...",
-    fullMessage: "My Beloved,\n\nA single rose speaks a thousand words, but none can truly describe how much you mean to me. You are the passion in my life and the peace in my soul.\n\nYours truly.",
-    date: "Feb 14, 2026"
+    title: "Open when it's a good day",
+    image: `${import.meta.env.BASE_URL}sea.jpg`,
+    previewText: "KEEP SMILING",
+    fullMessage: "If you’re opening this, I’m hoping it’s because today was a good day. Not just “nothing went wrong” good, but the kind where things have gone your way, the sky is pretty, and you're smiling a lot. YAY! \n\\n\
+I wish I could sit across from you and hear every small detail: you better call me to tell me anyways. You don't always give yourself enough credit, and you need to celebrate, and be celebrated more. I hope you’re taking a second to actually let yourself feel it. You’re so used to moving onto the next task, the next responsibility, the next one of your 3 jobs HAHAH. But days like this deserve to be paused in. Linger in it a little. Replay the good parts. Let it sink in that you’re so so cool and that you deserve amazing things, and that you should always be smiling. \n\ \n\
+Also I’m really proud of you! If I was there, we’d celebrate in some small way (MORE SNACKS TO TRY PROBABLY). But since I’m not, let me know, let me talk to you, let me get you a fun treat, and let me be part of it.\n\ \n\
+Keep Smiling!!!",
+ date: "Feb 11, 2026"
   }
 ];
