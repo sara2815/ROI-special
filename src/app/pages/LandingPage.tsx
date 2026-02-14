@@ -58,7 +58,7 @@ export function LandingPage({ onStartMusic }: LandingPageProps) {
           className="space-y-8 mt-4"
         >
           <h1 className="font-['Great_Vibes'] text-6xl md:text-7xl text-stone-800 mb-2">
-            Dear X,
+            Dear Shahman,
           </h1>
           
           <p className="font-['Crimson_Text'] text-2xl md:text-3xl text-stone-600 italic">
