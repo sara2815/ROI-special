@@ -44,7 +44,7 @@ You're built for great things (I ensure I always get a good ROI you know) and I 
   {
     id: "5",
     title: "Open when its been a long day",
-    image: "/public/milk.jpg",
+    image: `${import.meta.env.BASE_URL}milk.jpg`,
     previewText: "Dilly dally maxxing",
     fullMessage: "If you’re opening this, I’m guessing it’s been a long day. The type where everything feels heavy and you really need a NAP (this is a threat to ensure you're sleeping soon). I see unfortunately that you find yourself in this state a bit too often. \n\n\
     So before anything else, I want you to pause for a second. Take a deep breath in. Close your eyes for a few seconds. And then answer my very important questions: \n\n\
