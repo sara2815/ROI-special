@@ -3,6 +3,8 @@ import { CARDS } from "@/app/data/cards";
 import { ArrowLeft, Quote } from "lucide-react";
 import { motion } from "motion/react";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
+import ReactPlayer from "react-player";
+
 
 export function MessageView() {
   const { id } = useParams();
@@ -80,6 +82,16 @@ export function MessageView() {
           </div>
         </motion.div>
       </div>
+      <ReactPlayer
+  url={card.music}
+  playing
+  loop
+  controls={false}
+  volume={0.4}
+  width="0"
+  height="0"
+/>
+
     </div>
   );
 }
