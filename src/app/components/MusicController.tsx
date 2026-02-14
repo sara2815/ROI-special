@@ -2,16 +2,19 @@ import { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import { useLocation } from "react-router-dom";
 
-const MUSIC_TRACKS: Record<string, string> = {
-  "/": "/audio/song_1.mp3",
-  "/collection": "/audio/song_2.mp3",
+const base = import.meta.env.BASE_URL;
 
-  "/message/1": "/audio/song_1.mp3",
-  "/message/2": "/audio/song_2.mp3",
-  "/message/3": "/audio/song_3.mp3",
-  "/message/4": "/audio/song_4.mp3",
-  "/message/long-day": "/audio/song_5.mp3",
-  default: "/audio/song_1.mp3",
+const MUSIC_TRACKS: Record<string, string> = {
+  "/": `${base}audio/song_1.mp3`,
+  "/collection": `${base}audio/song_2.mp3`,
+
+  "/message/1": `${base}audio/song_1.mp3`,
+  "/message/2": `${base}audio/song_2.mp3`,
+  "/message/3": `${base}audio/song_3.mp3`,
+  "/message/5": `${base}audio/song_5.mp3`,
+  "/message/6": `${base}audio/song_6.mp3`,
+
+  default: `${base}audio/song_1.mp3`,
 };
 
 interface MusicControllerProps {
