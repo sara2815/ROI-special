@@ -38,7 +38,7 @@ export function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="font-['Crimson_Text'] text-stone-600 text-xl max-w-lg mx-auto italic"
           >
-            Open when
+          A few hundreds of thousand miles seperate us, which means a lot of conversations won't happen in real time. Maybe this helps?
           </motion.p>
         </header>
 
