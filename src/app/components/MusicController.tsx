@@ -2,16 +2,15 @@ import { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import { useLocation } from "react-router-dom";
 
-// Configuration for music tracks (local MP3 files placed in `public/audio`)
-// Names expected: song_1.mp3, song_2.mp3, song_3.mp3
 const MUSIC_TRACKS: Record<string, string> = {
-  // Default / landing page
   "/": "/audio/song_1.mp3",
-  
-  // Collection / home
   "/collection": "/audio/song_2.mp3",
 
-  // Default fallback
+  "/message/1": "/audio/song_1.mp3",
+  "/message/2": "/audio/song_2.mp3",
+  "/message/3": "/audio/song_3.mp3",
+  "/message/4": "/audio/song_4.mp3",
+  "/message/long-day": "/audio/song_5.mp3",
   default: "/audio/song_1.mp3",
 };
 
@@ -24,17 +23,10 @@ export function MusicController({ isPlaying }: MusicControllerProps) {
   const [url, setUrl] = useState(MUSIC_TRACKS.default);
 
   useEffect(() => {
-    // Check if the current path has a specific track assigned
     const path = location.pathname;
-    // Message pages share the same track (uses song_3)
-    if (path.startsWith("/message")) {
-      setUrl("/audio/song_3.mp3");
-      return;
-    }
-
     const specificTrack = MUSIC_TRACKS[path];
     setUrl(specificTrack ?? MUSIC_TRACKS.default);
-  }, [location]);
+  }, [location.pathname]);
 
   if (!isPlaying) return null;
 
@@ -43,7 +35,7 @@ export function MusicController({ isPlaying }: MusicControllerProps) {
       <ReactPlayer
         url={url}
         playing={isPlaying}
-        loop={true}
+        loop
         volume={0.4}
         width="0"
         height="0"

@@ -8,7 +8,7 @@
   const __dirname = path.dirname(__filename)
 
   export default defineConfig({
-    base: '/ROI-special/',
+    base: '/',
     plugins: [
       react(),
       tailwindcss(),
